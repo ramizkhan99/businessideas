@@ -1,4 +1,2 @@
 # businessideas
-```
-$ const a = 55
-```
+Website repository for Business Ideas 2019
