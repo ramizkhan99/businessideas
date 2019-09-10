@@ -1,11 +1,8 @@
-let answer;
+let answer
 
 function myFunction(option) {
     console.log(option)
     answer = option
-    const selected = document.getElementById(option)
-    //selected.classList.add('selected')
-
 }
 
 const submit = () => {
@@ -26,7 +23,7 @@ const submit = () => {
 }
 function expand(){
     document.querySelector('.question').classList.toggle('expand')
-    var state=document.querySelector('#seemore').innerHTML
+    let state=document.querySelector('#seemore').innerHTML
     if(state=="SEE MORE"){
         document.querySelector('#seemore').innerHTML="SEE LESS" 
     }
@@ -61,7 +58,4 @@ const changecolor=()=>{
     document.querySelector('#submit').style.backgroundColor=colors[i];
     document.querySelector('#expand-sym').style.backgroundColor=colors[i];
     //document.querySelector('#cntnr').style.backgroundColor=colors[i];
-    
-    
-
 }
