@@ -1,5 +1,6 @@
 let answer = 1
 let resp
+let companychoice = "samsung"
 
 
 function myFunction(option) {
@@ -12,17 +13,24 @@ window.onload=()=>{
 }
 
 const submit = () => {
+    
+    changecolor()
+
     if(!resp){
         answer=1
     }
     else{
+        alert(resp[answer].impact)
         answer=resp[answer].nextid
+
     }
     $.ajax({
         type: "POST",
         url: "https://us-central1-business-idea-c71fa.cloudfunctions.net/app/",
         data: {
-            qno: answer
+            qno: answer,
+            company:companychoice
+
         },
         crossDomain: true,
         dataType: "json",
@@ -30,7 +38,7 @@ const submit = () => {
             console.log(response)
             resp = response
             document.getElementById("question").innerHTML = response.question
-            document.getElementById("question_no").innerHTML = answer
+            //document.getElementById("question_no").innerHTML = answer
             document.getElementById("option1").innerHTML = response[0].content
             document.getElementById("option2").innerHTML = response[1].content
             document.getElementById("option3").innerHTML = response[2].content
@@ -39,6 +47,7 @@ const submit = () => {
             //console.log(response[0].nextid)
         }
     });
+    
 }
 function expand(){
     document.querySelector('.question').classList.toggle('expand')
