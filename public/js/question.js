@@ -15,12 +15,21 @@ window.onload=()=>{
 const submit = () => {
     
     changecolor()
-
+    var instance = M.Collapsible.getInstance(elem);
+    instance.close(0);
+    instance.close(1);
+    instance.close(2);
+    instance.close(3);
+    
+    
+    
     if(!resp){
         answer=1
     }
     else{
-        alert(resp[answer].impact)
+        
+        swal("Submitted",resp[answer].impact, "warning");
+       
         answer=resp[answer].nextid
 
     }
@@ -43,7 +52,7 @@ const submit = () => {
             document.getElementById("option2").innerHTML = response[1].content
             document.getElementById("option3").innerHTML = response[2].content
             document.getElementById("option4").innerHTML = response[3].content
-
+            
             //console.log(response[0].nextid)
         }
     });
@@ -87,6 +96,11 @@ const changecolor=()=>{
     document.querySelector('#expand-sym').style.backgroundColor=colors[i];
     //document.querySelector('#cntnr').style.backgroundColor=colors[i];
 }
+
+
+  //launch it.
+  
+
 
 
 

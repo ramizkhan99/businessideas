@@ -1,3 +1,9 @@
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
 .selected {
     color: rgba(255, 255, 255, 0.877);
     background-color: #0288d1;
@@ -136,3 +142,5 @@
     background:#284570;
     border-radius:2px;
   }
+
+  
