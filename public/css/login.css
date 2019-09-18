@@ -185,3 +185,7 @@ body{
 #submit{
     margin-top: 20px;
 }
+img{
+    max-height: 200px;
+    max-width: 200px;
+}

@@ -1,6 +1,7 @@
 let answer = 1
 let resp
 
+
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('id');
 console.log(myParam)
@@ -106,7 +107,7 @@ const score = ()=>{
     Swal.fire({
         type: 'info',
         title: 'Score!',
-        text: 420
+        text: 156
         //footer: '<a href>Why do I have this issue?</a>'
       })
 }

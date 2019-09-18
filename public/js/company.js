@@ -1,9 +1,10 @@
 let submit
+
 const selected = (company,e)=>{
     
     let name = "company"+e
     submit=company
-
+    
      
      document.querySelector('#submit button').classList.remove('disabled')
 
