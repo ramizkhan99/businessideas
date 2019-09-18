@@ -99,9 +99,17 @@ const changecolor=()=>{
     //document.querySelector('#cntnr').style.backgroundColor=colors[i];
 }
 
-
-  //launch it.
-  
+const Signout = ()=>{
+    console.log("tried to signout")
+}
+const score = ()=>{
+    Swal.fire({
+        type: 'info',
+        title: 'Score!',
+        text: 420
+        //footer: '<a href>Why do I have this issue?</a>'
+      })
+}
 
 
 
