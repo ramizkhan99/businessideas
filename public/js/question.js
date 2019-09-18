@@ -1,7 +1,10 @@
 let answer = 1
 let resp
-let companychoice = "samsung"
 
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('id');
+console.log(myParam)
+let companychoice = myParam
 
 function myFunction(option) {
     console.log(option)
@@ -21,14 +24,19 @@ const submit = () => {
     instance.close(2);
     instance.close(3);
     
-    
+    //resp[answer].impact
     
     if(!resp){
         answer=1
     }
     else{
         
-        swal("Submitted",resp[answer].impact, "warning");
+        Swal.fire({
+            type: 'success',
+            title: 'Submitted',
+            text: resp[answer].impact
+            //footer: '<a href>Why do I have this issue?</a>'
+          })
        
         answer=resp[answer].nextid
 
@@ -60,13 +68,7 @@ const submit = () => {
 }
 function expand(){
     document.querySelector('.question').classList.toggle('expand')
-    let state=document.querySelector('#seemore').innerHTML
-    if(state=="SEE MORE"){
-        document.querySelector('#seemore').innerHTML="SEE LESS" 
-    }
-    else{
-        document.querySelector('#seemore').innerHTML="SEE MORE"
-    }
+
 }
 $(document).bind("contextmenu",function(e){
     e.preventDefault();

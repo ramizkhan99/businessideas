@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Companies</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/companies.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <h3>Choose your company</h3>
+    <hr width=20%>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col s4">
+                <div class="card" id="company1">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/dlf.jpg" onclick="selected('dlf',1)">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">DLF<i
+                                class="material-icons right">more_vert</i></span>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">DLF<i
+                                class="material-icons right">close</i></span>
+                        <p>DLF Limited is Gurgaon Ahirwal-based commercial real estate developer. It was founded by
+                            Chaudhary Raghvendra Singh in 1946 and is based in New Delhi, India.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card" id="company2">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/indoil.jpg" onclick="selected('indianoil',2)">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Indian Oil<i
+                                class="material-icons right">more_vert</i></span>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Indian Oil<i
+                                class="material-icons right">close</i></span>
+                        <p>Indian Oil Corporation Limited, commonly known as IndianOil is an Indian state government
+                            owned oil and gas company headquartered in New Delhi. It is the largest commercial oil
+                            company in the country, with a net profit of INR 19,106 crore for the financial year
+                            2016–17.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card" id="company3">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/mahindra.jpg" onclick="selected('mahindra',3)">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Mahindra<i
+                                class="material-icons right">more_vert</i></span>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Mahindra<i
+                                class="material-icons right">close</i></span>
+                        <p>Mahindra & Mahindra Limited is an Indian multinational car manufacturing corporation
+                            headquartered in Mumbai, Maharashtra, India. It was established in 1945 as Muhammad &
+                            Mahindra and later renamed as Mahindra and Mahindra.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="card" id="company4">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/ola.jpg" onclick="selected('ola',4)">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Ola<i
+                                class="material-icons right">more_vert</i></span>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Ola<i
+                                class="material-icons right">close</i></span>
+                        <p>Ola Cabs, is an Indian transportation network company offering services that include
+                            peer-to-peer ridesharing, ride service hailing, taxi and food delivery. The company is based
+                            in Bengaluru, Karnataka, India and was developed by ANI Technologies Pvt. Ltd. As of May
+                            2019, Ola was valued at about $6.2 billion.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="card" id="company5">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/samsung.jpg" onclick="selected('samsung',5)">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Samsung<i
+                                class="material-icons right">more_vert</i></span>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Samsung<i
+                                class="material-icons right">close</i></span>
+                        <p>Samsung is a South Korean multinational conglomerate headquartered in Samsung Town, Seoul. It
+                            comprises numerous affiliated businesses, most of them united under the Samsung brand, and
+                            is the largest South Korean chaebol. Samsung was founded by Lee Byung-chul in 1938 as a
+                            trading company.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="submit">
+            <button class="btn waves-effect waves-light disabled green lighten-1" type="submit" name="action"
+                onclick="submitSend()">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+
+
+
+    </div>
+    <script src="js/company.js"></script>
+
+</body>
+
+</html>

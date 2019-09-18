@@ -1,0 +1,43 @@
+.card{
+    height: 350px;
+    width: 275px;
+}
+.card img:hover{
+    transform: scale(1.05);
+    transition: all 1s ease;
+    overflow: hidden;
+}
+h3{
+    padding: 20px;
+    color: steelblue;
+    padding-bottom: 0px;
+  }
+  hr{
+    margin-top: 0px;
+    margin-left: 25px;
+    border:1.25px solid rgba(27, 60, 243, 0.856);
+    margin-bottom: 40px;
+  }
+  img{
+      height: 250px;
+      width: 275px;
+  }
+#company4{
+    margin-left: 80px;
+}
+#company5{
+    margin-left:80px;
+}
+
+.card-content{
+    padding-bottom: 0px;
+}
+#submit{
+    text-align: center;
+    padding:10px;
+
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
