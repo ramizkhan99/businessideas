@@ -1,4 +1,11 @@
 let submit
+window.onload=()=>{
+    alert("nope")
+    if(!document.cookie){
+        alert("working")
+        location.href='/login'
+    }
+}
 
 const selected = (company,e)=>{
     
@@ -23,11 +30,11 @@ const submitSend = ()=>{
     $.ajax({
         type: "PATCH",
         url: "https://business-ideas-users-api.herokuapp.com/users/me",
-        // headers: {
-        //     'Authorization': "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDgzYWU2Yjk5YTcxMjE3NTA3ZmQ5ZGYiLCJpYXQiOjE1Njg5MTA5NTV9.maw4OHue7G5tvd-nArJRxXH40HAaITDHG83CMGtdSUk"
-        // },
+        headers: {
+            'Authorization': `Bearer ${document.cookie}`
+        },
         data: JSON.stringify({
-            "company":submit
+            "company": submit
         }),
         crossDomain: true,
         dataType: "json",

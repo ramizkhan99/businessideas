@@ -13,9 +13,6 @@ $(document).ready(function() {
    $.ajax({
        type: "POST",
        url: "https://business-ideas-users-api.herokuapp.com/users/login",
-       // headers: {
-       //     'Authorization': "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDgzYWU2Yjk5YTcxMjE3NTA3ZmQ5ZGYiLCJpYXQiOjE1Njg5MTA5NTV9.maw4OHue7G5tvd-nArJRxXH40HAaITDHG83CMGtdSUk"
-       // },
        data: JSON.stringify({
            "email": emailId,
            "password": passwd
@@ -30,6 +27,7 @@ $(document).ready(function() {
            // alert('success')
            // return response
            localStorage.setItem('user', JSON.stringify(response))
+           document.cookie=token
            // localStorag.setItem('')
            location.href='/companies'
        }
