@@ -8,6 +8,9 @@ let selectedCompany
 app.use(express.static(path.join(__dirname, '../public')))
 app.set('views', path.join(__dirname, '../templates/views'))
 app.set('view engine', 'hbs')
+app.get('/',(req,res)=>{
+    res.redirect('/login')
+})
 
 app.get('/question', (req, res) => {
     res.render('question')

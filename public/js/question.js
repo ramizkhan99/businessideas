@@ -12,9 +12,24 @@ function myFunction(option) {
     answer = option
 }
 window.onload=()=>{
+    if(!document.cookie){
+        
+        location.href='/login'
+    }
     submit()
     
 }
+window.addEventListener("keydown",function (e) {
+    if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) { 
+        e.preventDefault();
+    }
+})
+window.addEventListener("keydown",function (e) {
+    if ( e.ctrlKey && e.keyCode === 67) { 
+        e.preventDefault();
+    }
+})
+
 
 const submit = () => {
     
@@ -47,7 +62,7 @@ const submit = () => {
         url: "https://us-central1-business-idea-c71fa.cloudfunctions.net/app/",
         data: {
             qno: answer,
-            company:companychoice
+            company:"company/"+companychoice
 
         },
         crossDomain: true,
@@ -102,6 +117,9 @@ const changecolor=()=>{
 
 const Signout = ()=>{
     console.log("tried to signout")
+    document.cookie=''
+    localStorage.clear()
+    location.href='/login'
 }
 const score = ()=>{
     Swal.fire({

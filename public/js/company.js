@@ -1,8 +1,8 @@
 let submit
-window.onload=()=>{
+()=>{
     alert("nope")
     if(!document.cookie){
-        alert("working")
+        
         location.href='/login'
     }
 }
@@ -24,6 +24,11 @@ const selected = (company,e)=>{
      document.getElementById(name).classList.add('lighten-1')
 }
 const submitSend = ()=>{
+    if(!document.cookie){
+        
+        location.href='/login'
+    }
+    else{
     var url = '/question?id=' + submit;
     location.href = url
     console.log("submitted company  "+submit)
@@ -43,13 +48,13 @@ const submitSend = ()=>{
             // console.log(response)
             token = response.token
             console.log(token)
-            // alert('success')
-            // return response
             console.log(response)
-            // localStorag.setItem('')
-            location.href='/companies'
+            alert('success')
+            // return response
+            
+            
         }
-    });
+    });}
     
 }
 $(document).ready(function() {

@@ -21,11 +21,10 @@ $(document).ready(function() {
        dataType: "json",
        contentType: "application/json",
        success: function (response) {
-           // console.log(response)
+           
            token = response.token
            console.log(token)
-           // alert('success')
-           // return response
+          
            localStorage.setItem('user', JSON.stringify(response))
            document.cookie=token
            // localStorag.setItem('')
