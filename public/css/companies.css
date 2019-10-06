@@ -2,6 +2,9 @@
     height: 350px;
     width: 275px;
 }
+.selectit{
+    border: 10px , green;
+}
 .card img:hover{
     transform: scale(1.05);
     transition: all 1s ease;
@@ -22,16 +25,22 @@ h3{
       height: 250px;
       width: 275px;
   }
+  /* body{
+      background-color:rgba(33, 150, 243,0.6)
+  } */
 #company4{
-    margin-left: 80px;
+    margin-left: 140px;
 }
 #company5{
-    margin-left:80px;
+    margin-left:20px;
 }
 
 .card-content{
-    padding-bottom: 0px;
+    padding: 10px;
 }
+/* img{
+    padding: 10px;
+} */
 #submit{
     text-align: center;
     padding:10px;

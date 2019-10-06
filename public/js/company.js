@@ -17,11 +17,11 @@ const selected = (company,e)=>{
 
      for (let index = 1; index < 6; index++) {
          const element = document.getElementById('company' + index) 
-         element.classList.remove('green')
-        element.classList.remove('lighten-1')
+         element.classList.remove('light-green')
+        element.classList.remove('lighten-4')
      }
-     document.getElementById(name).classList.add('green')
-     document.getElementById(name).classList.add('lighten-1')
+     document.getElementById(name).classList.add('light-green')
+     document.getElementById(name).classList.add('lighten-4')
 }
 const submitSend = ()=>{
     if(!document.cookie){
@@ -29,9 +29,9 @@ const submitSend = ()=>{
         location.href='/login'
     }
     else{
-    var url = '/question?id=' + submit;
-    location.href = url
-    console.log("submitted company  "+submit)
+    // var url = '/question?id=' + submit;
+    // location.href = url
+    // console.log("submitted company  "+submit)
     $.ajax({
         type: "PATCH",
         url: "https://business-ideas-users-api.herokuapp.com/users/me",
@@ -54,7 +54,10 @@ const submitSend = ()=>{
             
             
         }
-    });}
+    });
+    var url = '/question?id=' + submit;
+    location.href = url
+    console.log("submitted company  "+submit)}
     
 }
 $(document).ready(function() {
