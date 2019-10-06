@@ -29,9 +29,11 @@ const submitSend = ()=>{
         location.href='/login'
     }
     else{
-    // var url = '/question?id=' + submit;
-    // location.href = url
-    // console.log("submitted company  "+submit)
+    var url = '/question?id=' + submit;
+    location.href = url
+    console.log("submitted company  "+submit)
+    
+    // PATCH request not working
     $.ajax({
         type: "PATCH",
         url: "https://business-ideas-users-api.herokuapp.com/users/me",
@@ -54,10 +56,7 @@ const submitSend = ()=>{
             
             
         }
-    });
-    var url = '/question?id=' + submit;
-    location.href = url
-    console.log("submitted company  "+submit)}
+    });}
     
 }
 $(document).ready(function() {
