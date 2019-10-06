@@ -29,7 +29,7 @@ const submitSend = ()=>{
         location.href='/login'
     }
     else{
-    var url = '/question?id=' + submit;
+    var url = '/info?id=' + submit;
     location.href = url
     console.log("submitted company  "+submit)
     

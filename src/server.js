@@ -30,3 +30,7 @@ app.get('/login', (req, res) => {
     res.render('login')
     
 })
+app.get('/info', (req, res) => {
+    res.render('description')
+    
+})

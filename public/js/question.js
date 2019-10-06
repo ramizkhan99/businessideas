@@ -12,6 +12,7 @@ function myFunction(option) {
     answer = option
 }
 window.onload=()=>{
+    console.log(myParam)
     if(!document.cookie){
         
         location.href='/login'
@@ -129,6 +130,7 @@ const score = ()=>{
         //footer: '<a href>Why do I have this issue?</a>'
       })
 }
+
 
 
 
