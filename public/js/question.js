@@ -104,6 +104,9 @@ const submit = () => {
                 
             }
         });
+        let user = JSON.parse(localStorage.getItem('user'))
+        user.user.currentQuestion = answer
+        localStorage.setItem('user', JSON.stringify(user))
         
 
     }
@@ -175,7 +178,14 @@ const score = ()=>{
     Swal.fire({
         type: 'info',
         title: 'Score!',
-        text: 156
+        html: `
+        <b>Production:</b> 56<br>
+        <b>Sales:</b> 69<br>
+        <b>R&D:</b> 99<br>
+        <b>Finance:</b> 88
+        `
+
+
         //footer: '<a href>Why do I have this issue?</a>'
       })
 }
