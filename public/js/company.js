@@ -45,7 +45,7 @@ const submitSend = ()=>{
             token = response.token
             console.log(token)
             console.log(response)
-            alert('success')
+            // alert('success')
             location.href = url
             // return response
             
@@ -59,7 +59,7 @@ $(document).ready(function() {
     function disablePrev() { window.history.forward() }
     window.onload = ()=>{
         disablePrev()
-        alert("nope")
+        // alert("nope")
         if(!document.cookie){
             
             location.href='/login'
@@ -73,22 +73,28 @@ $(document).ready(function() {
      }
     window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
  });
-//  $(document).bind("contextmenu",function(e){
-//     e.preventDefault();
-//     console.log(e.pageX + "," + e.pageY);
-//     $("#cntnr").css("left",e.pageX);
-//     $("#cntnr").css("top",e.pageY);
-//    // $("#cntnr").hide(100);        
-//     $("#cntnr").fadeIn(200,startFocusOut());      
-//   });
+ $(document).bind("contextmenu",function(e){
+    e.preventDefault();
+    console.log(e.pageX + "," + e.pageY);
+    $("#cntnr").css("left",e.pageX);
+    $("#cntnr").css("top",e.pageY);
+   // $("#cntnr").hide(100);        
+    $("#cntnr").fadeIn(200,startFocusOut());      
+  });
   
-//   function startFocusOut(){
-//     $(document).on("click",function(){
-//     $("#cntnr").hide();        
-//     $(document).off("click");
-//     });
-//   }
+  function startFocusOut(){
+    $(document).on("click",function(){
+    $("#cntnr").hide();        
+    $(document).off("click");
+    });
+  }
   
-//   $("#items > li").click(function(){
-//   $("#op").text("You have selected "+$(this).text());
-//   });
+  $("#items > li").click(function(){
+  $("#op").text("You have selected "+$(this).text());
+  });
+  const Signout = ()=>{
+    console.log("tried to signout")
+    document.cookie=''
+    localStorage.clear()
+    location.href='/login'
+}

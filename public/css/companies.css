@@ -50,3 +50,16 @@ a{
     text-decoration: none;
     color: aliceblue;
 }
+#cntnr{
+    display:none;
+    text-align: center;
+    position:fixed;
+    border:1px solid rgb(233, 233, 233);
+    width:150px;      
+    background-color: #feffffd0;
+     
+    
+    border-radius:4px;
+    cursor:pointer;
+    font-size: 16px;
+  }
