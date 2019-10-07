@@ -1,4 +1,4 @@
-let answer = 1
+
 let resp
 
 
@@ -17,6 +17,9 @@ window.onload=()=>{
         
         location.href='/login'
     }
+    let user =  JSON.parse(localStorage.getItem('user'))
+    answer = user.user.currentQuestion   
+    
     submit()
     
 }
@@ -44,7 +47,29 @@ const submit = () => {
    
     
     if(!resp){
-        answer=1
+        $.ajax({
+            type: "POST",
+            url: "https://us-central1-business-idea-c71fa.cloudfunctions.net/app/",
+            data: {
+                qno: answer,
+                company:"company/"+companychoice
+    
+            },
+            crossDomain: true,
+            dataType: "json",
+            success: function (response) {
+                console.log(response)
+                resp = response
+                document.getElementById("question").innerHTML = response.question
+                
+                document.getElementById("option1").innerHTML = response[0].content
+                document.getElementById("option2").innerHTML = response[1].content
+                document.getElementById("option3").innerHTML = response[2].content
+                document.getElementById("option4").innerHTML = response[3].content
+                
+               
+            }
+        });
     }
     else{
         
