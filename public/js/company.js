@@ -30,7 +30,7 @@ const submitSend = ()=>{
     }
     else{
     var url = '/info?id=' + submit;
-    location.href = url
+    
     console.log("submitted company  "+submit)
     
     // PATCH request not working
@@ -52,6 +52,7 @@ const submitSend = ()=>{
             console.log(token)
             console.log(response)
             alert('success')
+            location.href = url
             // return response
             
             
