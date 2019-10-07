@@ -1,11 +1,5 @@
 let submit
-()=>{
-    alert("nope")
-    if(!document.cookie){
-        
-        location.href='/login'
-    }
-}
+
 
 const selected = (company,e)=>{
     
@@ -57,11 +51,25 @@ const submitSend = ()=>{
             
             
         }
+        
     });}
     
 }
 $(document).ready(function() {
     function disablePrev() { window.history.forward() }
-    window.onload = disablePrev();
+    window.onload = ()=>{
+        disablePrev()
+        alert("nope")
+        if(!document.cookie){
+            
+            location.href='/login'
+        }
+        let user =  JSON.parse(localStorage.getItem('user'))
+        console.log(user.user.company)
+        if(user.user.company){
+            console.log("I have a company")
+            location.href = '/question?id='+user.user.company    
+        }
+     }
     window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
  });

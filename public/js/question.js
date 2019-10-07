@@ -41,7 +41,7 @@ const submit = () => {
     instance.close(2);
     instance.close(3);
     
-    //resp[answer].impact
+   
     
     if(!resp){
         answer=1
@@ -56,6 +56,30 @@ const submit = () => {
           })
        
         answer=resp[answer].nextid
+        $.ajax({
+            type: "PATCH",
+            url: "https://business-ideas-users-api.herokuapp.com/users/me",
+            headers: {
+                'Authorization': `Bearer ${document.cookie}`
+            },
+            data: JSON.stringify({
+                "currentQuestion": answer
+            }),
+            crossDomain: true,
+            dataType: "json",
+            contentType: "application/json",
+            success: function (response) {
+                // console.log(response)
+                token = response.token
+                console.log(token)
+                console.log(response)
+                
+                // return response
+                
+                
+            }
+        });
+        
 
     }
     $.ajax({
@@ -72,13 +96,13 @@ const submit = () => {
             console.log(response)
             resp = response
             document.getElementById("question").innerHTML = response.question
-            //document.getElementById("question_no").innerHTML = answer
+            
             document.getElementById("option1").innerHTML = response[0].content
             document.getElementById("option2").innerHTML = response[1].content
             document.getElementById("option3").innerHTML = response[2].content
             document.getElementById("option4").innerHTML = response[3].content
             
-            //console.log(response[0].nextid)
+           
         }
     });
     
