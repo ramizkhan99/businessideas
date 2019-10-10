@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Business ideas</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<body>
+<a href="/merger">Go to merger</a>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA7CVZe8_ga4PuOAtrrnheh9J43uDNkyD8",
+    authDomain: "business-ideas-134d4.firebaseapp.com",
+    databaseURL: "https://business-ideas-134d4.firebaseio.com",
+    projectId: "business-ideas-134d4",
+    storageBucket: "business-ideas-134d4.appspot.com",
+    messagingSenderId: "504116260995",
+    appId: "1:504116260995:web:8305df7ccbf0b52f"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<!-- <script type="text/javascript" src="js/merger.js"></script> -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+
+<script type="text/javascript">
+var db = firebase.firestore();
+var uid
+var sales_scoremdb
+var production_scoremdb
+var research_scoremdb
+var finance_scoremdb
+$.ajax({
+    type:'GET',
+    url:'https://business-ideas-users-api.herokuapp.com/users/me',
+    headers: {'Authorization': `Bearer ${document.cookie}`},
+   success:function(data){
+    uid = data._id
+    finance_scoremdb = data.scoreFinance
+    production_scoremdb = data.scoreProduction
+    research_scoremdb = data.scoreRnD
+    sales_scoremdb = data.scoreSales
+    var docRef = db.collection("users").doc(uid)
+    docRef.get().then((doc)=>{
+      user_data=doc.data()
+      user_data = {...user_data,
+        research_scoredb:research_scoremdb,
+        sales_scoredb:sales_scoremdb,
+        finance_scoredb:finance_scoremdb,
+        production_scoredb:production_scoremdb
+      }
+            docRef.set(user_data).then(()=>{
+              console.log("done")
+            })
+    })
+   }
+ });
+
+
+  
+</script>
+</body>
+</html>

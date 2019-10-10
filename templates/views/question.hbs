@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/question.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <link rel="shortcut icon" href="images/business.png" type="image/x-icon"/>
+    <title>Business Ideas</title>
+    <!-- JavaScript -->
+
+
+<!-- CSS -->
+
+<!-- Default theme -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+
+
+
+
+</head>
+<body >
+ 
+    <div class="question-box z-depth-3">
+        <div class="question" id="style-4">
+            <h1>Question <span id="question_no"></span></h1>
+            <p id="question"> </p>
+
+
+        </div>
+        <div id="expand-sym" onclick="expand()">
+
+            <p><i class="material-icons">unfold_more</i></p>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="container">
+
+        <ul class="collapsible expandable popout">
+            <li>
+                <div class="collapsible-header" id="one" onclick="myFunction(0)">Decision A</div>
+                <div class="collapsible-body"><span id="option1">Using expandable will keep this opened unless closed by
+                        the
+                        user!</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header" id="second" onclick="myFunction(1)">Decision B</div>
+                <div class="collapsible-body"><span id="option2">Section 2 is also opened while first one as
+                        well.</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header" id="third" onclick="myFunction(2)">Decision C</div>
+                <div class="collapsible-body"><span id="option3">All are opened</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header" id="fourth" onclick="myFunction(3)">Decision D</div>
+                <div class="collapsible-body"><span id="option4">All are opened</span></div>
+            </li>
+        </ul>
+        <a class="waves-effect   btn-large " id="submit" onclick="submit()">
+            Submit</a>
+    </div>
+    <div id='cntnr' >
+        <p onclick="changecolor()">change colour!</p>
+        
+        <p onclick="Signout()">SignOut</p>
+        <p onclick="score()">Score</p>
+    </div>
+    
+
+
+    <script>
+        var elem = document.querySelector('.collapsible.expandable');
+        var instance = M.Collapsible.init(elem, {
+            accordion: true
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+            M.AutoInit();
+        });
+        // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA7CVZe8_ga4PuOAtrrnheh9J43uDNkyD8",
+        authDomain: "business-ideas-134d4.firebaseapp.com",
+        databaseURL: "https://business-ideas-134d4.firebaseio.com",
+        projectId: "business-ideas-134d4",
+        storageBucket: "business-ideas-134d4.appspot.com",
+        messagingSenderId: "504116260995",
+        appId: "1:504116260995:web:8305df7ccbf0b52f"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="js/question.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+.card{
+    height: 350px;
+    width: 275px;
+}
+.selectit{
+    border: 10px , green;
+}
+.card img:hover{
+    transform: scale(1.05);
+    transition: all 1s ease;
+    overflow: hidden;
+}
+h3{
+    padding: 20px;
+    color: steelblue;
+    padding-bottom: 0px;
+  }
+  hr{
+    margin-top: 0px;
+    margin-left: 25px;
+    border:1.25px solid rgba(27, 60, 243, 0.856);
+    margin-bottom: 40px;
+  }
+  img{
+      height: 250px;
+      width: 275px;
+  }
+  /* body{
+      background-color:rgba(33, 150, 243,0.6)
+  } */
+#company4{
+    margin-left: 140px;
+}
+#company5{
+    margin-left:20px;
+}
+
+.card-content{
+    padding: 10px;
+}
+/* img{
+    padding: 10px;
+} */
+#submit{
+    text-align: center;
+    padding:10px;
+
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+#cntnr{
+    display:none;
+    text-align: center;
+    position:fixed;
+    border:1px solid rgb(233, 233, 233);
+    width:150px;      
+    background-color: #feffffd0;
+     
+    
+    border-radius:4px;
+    cursor:pointer;
+    font-size: 16px;
+  }

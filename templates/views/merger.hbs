@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Business ideas</title>
+</head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<!-- <div class="ui raised very padded text container segment"> -->
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<style type="text/css">
+  .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  body{
+    /*background-image: url(images/bg-img2.jpg);*/
+    background-size: cover;
+  }
+  .sty1{
+  position: absolute;
+  top:0%;
+  left:0%;
+  height: 200px;
+  width: 300px;
+  transform: rotate(-12deg);
+  border-radius: 10px;
+  background-color: white;
+  z-index: -1;
+  background: rgb(158,118,83);
+  background: linear-gradient(16deg, rgba(158,118,83,0.31) 0%, rgba(151,160,159,0.11) 97%, rgba(148,157,154,0.21) 100%);
+}
+.sty6{
+  width: 160px;
+  height: 200px;
+  position: absolute;
+  top: 30%;
+  right: -2%;
+  clip: rect(auto, 200px, auto, 110px);
+  transform: rotate(-35deg);
+  z-index: -1;
+  animation-name: stysix;
+  animation-duration: 2s;
+  animation-iteration-count: 50;
+}
+.sty6::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgb(84,83,158);
+  background: linear-gradient(16deg, rgba(84,83,158,1) 0%, rgba(151,160,159,1) 42%, rgba(89,83,185,1) 100%);
+  transform: rotate(-45deg);
+  
+}
+@keyframes stysix {
+  0% {transform: rotate(-35deg);}
+  50% {transform: rotate(-25deg);}
+  100% {transform: rotate(-35deg);}
+}
+.sty2{
+  position: absolute;
+  top:20%;
+  left:0%;
+  height: 200px;
+  width: 300px;
+  transform: rotate(-5deg);
+  border-radius: 5px;
+  background-color: white;
+  z-index: -1;
+  background: rgb(158,118,83);
+  background: linear-gradient(16deg, rgba(158,118,83,0.51) 0%, rgba(151,160,159,0.31) 97%, rgba(148,157,154,0.41) 100%);
+}
+.sty3{
+    position: absolute;
+    top:30%;
+    left:0px;
+    height: 60px;
+    width: 60px;
+    transform: rotate(5deg);
+    border-radius: 50px;
+    background-color: white;
+    z-index: -1;
+    background: rgb(158,118,83);
+    background: linear-gradient(16deg, rgba(158,118,83,0.21) 0%, rgba(151,160,159,0.11) 97%, rgba(148,157,154,0.31) 100%);
+    animation-name: stythree;
+      animation-duration: 3s;
+      animation-iteration-count: 50;
+  }
+  @keyframes stythree {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+}
+
+.sty4{
+  position: absolute;
+  top:40%;
+  left:0%;
+  height: 100px;
+  width: 100px;
+  transform: rotate(45deg);
+  border-radius: 0px;
+  z-index: -1;
+  background: rgb(158,118,83);
+  background: linear-gradient(16deg, rgba(158,118,83,0.51) 0%, rgba(151,160,159,0.31) 97%, rgba(148,157,154,0.41) 100%);
+  animation-name: styfour;
+  animation-duration: 5s;
+  animation-iteration-count: 50;
+}
+
+@keyframes styfour {
+  0% {transform: rotate(45deg);}
+  50% {transform: rotate(65deg);}
+  100% {transform: rotate(45deg);}
+}
+</style>
+<body>
+
+
+
+<div class="container">
+
+<table class="ui purple table">
+  <thead>
+    <tr>
+      <th>Verticals</th>
+      <th>Current score</th>
+      <th>Investment amount</th>
+      <th>Merger value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sales</td>
+      <td><span id='sales'><img src="images/805.gif" width="20px" height="20px"></span></td>
+      <td><div class="ui input"><input id="sal_inv" type="number" name="sales"></div>
+    <button onclick="sal_invf()" class="ui inverted purple button">Invest</button></td>
+      <td><span id="sal_merge_val"><img src="images/805.gif" width="20px" height="20px"></span></td>
+    </tr>
+    <tr>
+      <td>Production</td>
+      <td><span id='production'><img src="images/805.gif" width="20px" height="20px"></span><br></td>
+      <td><div class="ui input"><input id="pro_inv" type="number" name="sales"></div>
+    <button onclick="pro_invf()" class="ui inverted purple button">Invest</button></td>
+      <td><span id="pro_merge_val"><img src="images/805.gif" width="20px" height="20px"></span></td>
+    </tr>
+    <tr>
+      <td>Research</td>
+      <td><span id='research'><img src="images/805.gif" width="20px" height="20px"></span><br></td>
+      <td><div class="ui input"><input id="res_inv" type="number" name="sales"></div>
+    <button onclick="res_invf()" class="ui inverted purple button">Invest</button></td>
+      <td><span id="res_merge_val"><img src="images/805.gif" width="20px" height="20px"></span></td>
+    </tr>
+    <tr>
+      <td>Finance</td>
+      <td><span id='finance'><img src="images/805.gif" width="20px" height="20px"></span></td>
+      <td><div class="ui input"><input id="fin_inv" type="number" name="sales"></div>
+    <button onclick="fin_invf()" class="ui inverted purple button">Invest</button></td>
+      <td><span id="fin_merge_val"><img src="images/805.gif" width="20px" height="20px"></span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<div class="sty1"></div>
+<div class="sty3"></div>
+<div class="sty4"></div>
+<div class="sty6"></div>
+
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA7CVZe8_ga4PuOAtrrnheh9J43uDNkyD8",
+    authDomain: "business-ideas-134d4.firebaseapp.com",
+    databaseURL: "https://business-ideas-134d4.firebaseio.com",
+    projectId: "business-ideas-134d4",
+    storageBucket: "business-ideas-134d4.appspot.com",
+    messagingSenderId: "504116260995",
+    appId: "1:504116260995:web:8305df7ccbf0b52f"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script type="text/javascript" src="js/merger.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+</body>
+</html>
